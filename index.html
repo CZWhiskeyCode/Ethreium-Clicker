@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <title>ETH-Clicker</title>
+    <script defer src="site.js"></script>
+</head>
+<body>
+    <div class="mode-toggle">
+        <select id="theme-selector">
+            <option value="day" selected>🌞</option>
+            <option value="night">🌜</option>
+        </select>
+        <button id="music-toggle-button" class="music-toggle-button">🔈</button>
+    </div>
+    <div id="loading-screen" class="loading-screen">
+        <div class="quote-container">
+            <img id="quote-author-photo" class="quote-author-photo" src="" alt="Author Photo">
+            <div id="quote-text" class="quote"></div>
+        </div>
+        <div class="progress-container">
+            <div id="progress-bar" class="progress-bar"></div>
+            <div id="progress-text" class="progress-text">0%</div>
+        </div>
+    </div>
+    <div id="game-container" class="container hidden">
+        <div class="clicker-container">
+            <div class="clicker-border">
+                <img id="clicker-image" src="images/Ethereum.png" alt="Clicker">
+            </div>
+        </div>
+        <div class="click-count" id="click-count">Clicks: 0</div>
+        <div class="selector-container">
+            <div class="background-selector">
+                <label for="background-select">Choose Background:</label>
+                <select id="background-select">
+                    <option value="wallpapers/castle.jpg">Castle</option>
+                    <option value="wallpapers/mountain.jpg">Mountains</option>
+                </select>
+            </div>
+            <div class="owned-skins">
+                <label for="owned-skins-select">Owned Skins:</label>
+                <select id="owned-skins-select"></select>
+            </div>
+        </div>
+        <div class="shop">
+            <div class="boosters">
+                <h2>Boosters</h2>
+                <button id="buy-booster">Buy Booster (+1 per click) - 10 clicks</button>
+            </div>
+            <div class="skins">
+                <h2>Skins</h2>
+                <button class="buy-skin" data-cost="50" data-skin="skins/biscuit.png">
+                    Biscuit - 50 Clicks
+                </button>
+                <button class="buy-skin" data-cost="100" data-skin="skins/dogeCoin.png">
+                    DogeCoin - 100 Clicks
+                </button>
+                <button class="buy-skin" data-cost="100" data-skin="skins/Red.png">
+                    Red - 100 Clicks
+                </button>
+                <button class="buy-skin" data-cost="10" data-skin="skins/Lavrentiy.png">
+                    Koshak - 10 Clicks
+                </button>
+                <button class="buy-skin" data-cost="10" data-skin="skins/vedro.png">
+                    Vedro - 10 Clicks
+                </button>
+                <button class="buy-skin" data-cost="10" data-skin="skins/petya.png">
+                    Petya - 10 Clicks
+                </button>
+                <button class="buy-skin" data-cost="10" data-skin="skins/Bobus.png">
+                    Bobus - 10 Clicks
+                </button>
+            </div>
+            <div class="wallpapers">
+                <h2>Wallpapers</h2>
+                <button class ="buy-wallpapers" data-cost="80" data-wallpaper="wallpapers/castle.jpg">
+                    Castle - 80 Clicks
+                </button>
+                <button class ="buy-wallpapers" data-cost="150" data-wallpaper="wallpapers/mountain.jpg">
+                    Mountain - 150 Clicks
+                </button>
+            </div>
+        </div>
+        <div class="energy-container">
+            <div class="energy-bar-wrapper">
+                <div class="energy-bar" id="energy-bar"></div>
+            </div>
+            <div class="energy-text-wrapper">
+                <div id="energy-text" class="energy-text">100%</div>
+            </div>
+        </div>
+    </div>
+    <audio id="background-music" loop>
+        <source src="music/sleepless.mp3" type="audio/mpeg">
+    </audio>
+</body>
+</html>
